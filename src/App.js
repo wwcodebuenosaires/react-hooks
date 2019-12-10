@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import StateHook from './components/useState';
 import StateHookPractice from './components/useState/practice';
+import StateHookPractice2 from './components/useState/practice2';
 import StateHookClass from './components/useState/class';
 import EffectHook from './components/useEffect';
 import EffectHookConditional from './components/useEffect/conditional';
@@ -35,6 +36,7 @@ export default function App() {
               <div className="dropdown-menu" aria-labelledby="useStateLink">
                 <Link className="nav-link" to="/useState">Ejemplo</Link>
                 <Link className="nav-link" to="/useState/practice">Ejercicio</Link>
+                <Link className="nav-link" to="/useState/practice2">Ejercicio v2</Link>
                 <Link className="nav-link" to="/useState/class">Versión con Componente</Link>
               </div>
             </li>
@@ -70,6 +72,11 @@ export default function App() {
               <h1>Practicando usar el hook useState</h1>
               <h2>Armamos un contador que pueda sumar, restar y reiniciar</h2>
               <StateHookPractice />
+            </Route>
+            <Route exact path="/useState/practice2">
+              <h1>Practicando usar el hook useState</h1>
+              <h2>Armamos un contador que pueda sumar, restar y reiniciar</h2>
+              <StateHookPractice2 />
             </Route>
             <Route exact path="/useState/class">
               <h1>Practicando usar el hook useState</h1>

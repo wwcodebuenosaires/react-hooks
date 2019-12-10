@@ -9,7 +9,7 @@ export default function Timer() {
         return () => {
             clearInterval(timerID);
         };
-    });
+    }, []);
 
     useEffect(() => {
        if(time === 10) {
@@ -18,7 +18,7 @@ export default function Timer() {
     },[time]);
 
     function tick() {
-        setTime(time + 1);
+        setTime(prevTime => prevTime + 1);
     }
 
     return (

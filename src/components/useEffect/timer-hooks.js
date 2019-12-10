@@ -8,10 +8,10 @@ export default function Timer() {
         return () => {
             clearInterval(timerID);
         };
-    });
+    }, []);
 
     function tick() {
-        setTime(time + 1);
+        setTime(prevTime => prevTime + 1);
     }
 
     return (

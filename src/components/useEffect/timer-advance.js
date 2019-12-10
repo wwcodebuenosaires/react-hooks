@@ -10,7 +10,10 @@ export default class Timer extends React.Component {
     }
   
     componentDidMount() {
-      this.setTimer();
+      this.timerID = setInterval(
+        () => this.tick(),
+        1000
+      );
     }
   
     componentWillUnmount() {
@@ -29,13 +32,6 @@ export default class Timer extends React.Component {
       this.setState((prevState) => ({
         time: prevState.time + 1
       }));
-    }
-
-    setTimer() {
-      this.timerID = setInterval(
-        () => this.tick(),
-        1000
-      );
     }
   
     render() {
