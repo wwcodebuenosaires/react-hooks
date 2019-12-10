@@ -45,7 +45,7 @@ export default function App() {
               <div className="dropdown-menu" aria-labelledby="useEffectLink">
                 <Link className="nav-link" to="/useEffect">Ejemplo base</Link>
                 <Link className="nav-link" to="/useEffect/conditional">Ejemplo condicional 1</Link>
-                <Link className="nav-link" to="/useEffect/fetch">Ejemplo condicional 2 </Link>
+                <Link className="nav-link" to="/useEffect/fetch">Ejemplo condicional: fetch </Link>
                 <Link className="nav-link" to="/useEffect/timer">Ejercicio </Link>
                 <Link className="nav-link" to="/useEffect/timer/practice">Ejercicio: resolución </Link>
                 <Link className="nav-link" to="/useEffect/timerAdvance">Ejercicio Avanzado </Link>
@@ -58,6 +58,8 @@ export default function App() {
           <Switch>
             <Route exact path="/">
               <h1>Let's talk about Hooks</h1>
+              <h2>Ejercicios para el workshop</h2>
+              <iframe src="https://giphy.com/embed/11sBLVxNs7v6WA" width="480" height="217" frameBorder="0" allowFullScreen></iframe>
             </Route>
             <Route exact path="/useState">
               <h1>Practicando usar el hook useState</h1>

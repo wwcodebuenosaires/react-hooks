@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
 function EffectHook () {
-  const [name, setName] = useState('');
-
-  // Buscar una api que funcione
+  const [cat, setCat] = useState(null);
+  
+  // Llamada a una api
   useEffect(() => {
     console.log('Montar');
     async function fetchData() {
-      const data = await fetch('https://api.github.com/users/agusdemalde', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Access-Control-Allow-Origin': '*' },
-      });
+      const data = await fetch('https://api.thecatapi.com/v1/images/search?category_ids=2');
       const dataJson = await data.json();
-      setName(dataJson.name);
+      setCat(dataJson[0]);
     }
     fetchData(); 
   },[]); // Pasando un array vacío, se ejecuta únicamente la primera vez que se monta
   
   return (
     <div>
-      <p>Mi nombre es {name}</p>
+      <h3>Gatos en el espacio</h3>
+      {cat && 
+        <img src={cat.url} alt="cat" />
+      }
     </div>
   );
 };
